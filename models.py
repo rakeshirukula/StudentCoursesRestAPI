@@ -12,7 +12,7 @@ class Student(db.Model):
     email = db.Column(db.String(length=256), unique=True, nullable=False)
     phone = db.Column(db.String(length=11), nullable=False)
 
-    def __repr__(self) -> str:
+    def __repr__(self) :
         return "<Student id {}>".format(self.id)
 
 
@@ -25,7 +25,7 @@ class Course(db.Model):
     faculty = db.Column(db.String(length=100), nullable=False)
     duration = db.Column(db.Integer)
 
-    def __repr__(self) -> str:
+    def __repr__(self) :
         return "<Course id {}>".format(self.id)
 
 
