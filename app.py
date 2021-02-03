@@ -9,9 +9,9 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.DEBUG)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 DATABASE_URI = "mysql+pymysql://{}:{}@{}/{}".format(
-    os.getenv('MYSQL_USERNAME', 'rakesh'),
-    os.getenv('MYSQL_PASSWORD', 'rakesh12345'),
-    os.getenv('MYSQL_SERVER', '172.17.0.2'),
+    os.getenv('MYSQL_USERNAME', 'directdevops'),
+    os.getenv('MYSQL_PASSWORD', 'directdevops'),
+    os.getenv('MYSQL_SERVER', 'localhost'),
     os.getenv('MYSQL_DATABASE', 'test'))
 app.logger.debug("Database URI is {}".format(DATABASE_URI))
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
